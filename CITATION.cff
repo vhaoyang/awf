@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or the archived prediction data, please cite both this repository and the accompanying paper."
+title: "AWF: Probabilistic postprocessing of Antarctic surface wind speed (BQN/QRF/LightGBM comparison)"
+authors:
+  - family-names: Yang
+    given-names: Hao
+  - family-names: Li
+    given-names: Xiang
+  - family-names: Zhang
+    given-names: Lei
+  - family-names: Wang
+    given-names: Kai
+  - family-names: Wang
+    given-names: Yanni
+version: 1.0.0
+date-released: "2026-10-27"
+keywords: [Antarctica, wind speed, probabilistic forecasting, postprocessing, CRPS, quantile regression]
+license: MIT
+repository-code: "https://github.com/vhaoyang/awf"
