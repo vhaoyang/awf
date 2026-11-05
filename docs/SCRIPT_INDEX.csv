@@ -1,0 +1,66 @@
+path,stage,description
+scripts/build_sensor_registry.py,earlier processing or experiment,Build the station institution and nominal sensor-height registry.
+scripts/diag_e2.sh,acquisition utility,Shell utility; see source and REPRODUCE.md for external commands.
+scripts/e10_adaptive.py,main comparison and diagnostics,Evaluate BQN mixture scores in quantile coordinates.
+scripts/e10_audit_v303.py,main comparison and diagnostics,Compare selected six-design mixture scores with numerical references.
+scripts/e10_core.py,main comparison and diagnostics,Represent predictive components and evaluate equal-weight CDF mixtures.
+scripts/e10_figs_bqn.py,main comparison and diagnostics,Draw the BQN architecture and predictor-to-quantile transformation.
+scripts/e10_figs_overview.py,main comparison and diagnostics,Draw the experiment framework and station-level method-comparison maps.
+scripts/e10_figs_pit.py,main comparison and diagnostics,Plot ten-bin randomized PIT summaries from their saved diagnostic tables.
+scripts/e10_models.py,main comparison and diagnostics,"Implement BQN, QRF and LightGBM predictive distributions."
+scripts/e10_nico_convbound.py,main comparison and diagnostics,Compare full-fold Nico mixture scores at three quadrature resolutions.
+scripts/e10_nico_full.py,main comparison and diagnostics,"Refit Nico terrain-design folds, score all eligible rows and update outputs."
+scripts/e10_nico_rescore.py,main comparison and diagnostics,Rescore stored Nico coefficients at M=512 and update working summaries.
+scripts/e10_nico_rows.py,main comparison and diagnostics,Construct selected-row reference comparisons for Nico BQN mixtures.
+scripts/e10_pit_T.py,main comparison and diagnostics,Refit temporal components and construct atom-aware randomized PIT values.
+scripts/e10_protocol.py,main comparison and diagnostics,"Write the six-design experiment's data, split and configuration records."
+scripts/e10_run_F.py,main comparison and diagnostics,Fit and score the forward held-station design with preset model structures.
+scripts/e10_run_F1.py,main comparison and diagnostics,"Run the terrain-augmented temporal, held-station or forward design."
+scripts/e10_run_S.py,main comparison and diagnostics,Fit and score the leave-one-station-out design with preset model structures.
+scripts/e10_run_T.py,main comparison and diagnostics,Fit the temporal-design candidates and score three-seed CDF mixtures.
+scripts/e10_summarize.py,main comparison and diagnostics,Aggregate keyed spatial predictions with explicit weighting and row coverage.
+scripts/e1_station_qc.py,earlier processing or experiment,Screen AntAWS station records and summarize usable observations.
+scripts/e1c_label_qc.py,earlier processing or experiment,"Flag constant runs, long zero runs, large values and wind-speed jumps."
+scripts/e2_gfs_download.py,earlier processing or experiment,Retrieve selected GFS GRIB messages and interpolate them to stations.
+scripts/e2b_dedup.py,earlier processing or experiment,Deduplicate daily GFS station forecasts and report file completeness.
+scripts/e3_pair.py,earlier processing or experiment,Pair GFS forecasts with station observations at matching valid times.
+scripts/e4_diag.py,earlier processing or experiment,"Describe wind-error structure by speed, lead, terrain, season and direction."
+scripts/e4b_robust.py,earlier processing or experiment,"Explore institution, seasonal sampling and nominal-height sensitivity."
+scripts/e4c_figs.py,earlier processing or experiment,Plot the early bias diagnostics and export their supporting tables.
+scripts/e5_lgb_baseline.py,earlier processing or experiment,Fit early deterministic and three-quantile wind postprocessing baselines.
+scripts/e5b_loo.py,earlier processing or experiment,Evaluate the early LightGBM baseline by leaving out one station at a time.
+scripts/e5c_stratified.py,earlier processing or experiment,Summarize early baseline errors and coverage within observed strata.
+scripts/e5d_ablation.py,earlier processing or experiment,Compare feature subsets in the early LightGBM baseline.
+scripts/e5g_phys.py,earlier processing or experiment,Construct GFS-orography predictors and compare early spatial feature sets.
+scripts/e5h_rema.py,earlier processing or experiment,Construct multiscale REMA features and evaluate early feature variants.
+scripts/e5i_emos.py,earlier processing or experiment,Fit nonhomogeneous Gaussian regression baselines by forecast lead.
+scripts/e5j_shap.py,earlier processing or experiment,Plot SHAP summaries and predictor-dependence diagnostics.
+scripts/e6_figs.py,earlier processing or experiment,Assemble figures from the early diagnostics and baseline experiments.
+scripts/e6b_p0_audit.py,earlier processing or experiment,"Check strong-wind contingency counts, split keys and lead-zero summaries."
+scripts/e6c_loo_cov.py,earlier processing or experiment,Refit early held-station models and report quantile and interval coverage.
+scripts/e6d_fairbase.py,earlier processing or experiment,Compare early station-aware baselines and threshold operating points.
+scripts/e6e_densq.py,earlier processing or experiment,Fit the early dense-quantile model and examine tail-probability diagnostics.
+scripts/e6f_xspatial.py,earlier processing or experiment,Compare early forward held-station and station-identifier configurations.
+scripts/e7_core.py,earlier processing or experiment,"Provide historical quantile scores, CDF interpolation and date-block sampling."
+scripts/e7_cross.py,earlier processing or experiment,Refit the intermediate quantile models and summarize raw quantile crossings.
+scripts/e7_loo.py,earlier processing or experiment,Evaluate intermediate held-station configurations with geographic alignment.
+scripts/e7_master.py,earlier processing or experiment,"Build intermediate keyed predictions, scores and diagnostic summaries."
+scripts/e7_terrain.py,earlier processing or experiment,Construct intermediate terrain gradients and local east-north alignment.
+scripts/e8_core.py,earlier processing or experiment,Construct complete quantile distributions and compute their scores.
+scripts/e8_figs.py,earlier processing or experiment,Plot intermediate method scores and probability-threshold operating curves.
+scripts/e8_fwd.py,earlier processing or experiment,Fit the intermediate terrain model for forward held-station evaluation.
+scripts/e8_loo.py,earlier processing or experiment,Fit the intermediate held-station terrain model and export keyed predictions.
+scripts/e8_scores.py,earlier processing or experiment,Score intermediate predictions using one complete predictive distribution.
+scripts/e8_temporal.py,earlier processing or experiment,Evaluate intermediate feature variants with a shared temporal split.
+scripts/e8_terrain.py,earlier processing or experiment,Extract REMA terrain features with explicit sampling and missingness rules.
+scripts/e9_derived.py,earlier processing or experiment,Derive intermediate diagnostic summaries and POFD-cap operating points.
+scripts/find_missing.sh,acquisition utility,Shell utility; see source and REPRODUCE.md for external commands.
+scripts/launch_e2_full.sh,acquisition utility,Shell utility; see source and REPRODUCE.md for external commands.
+scripts/probe_daily_2021.py,acquisition utility,List available 2021 GFS date keys from the public S3 bucket.
+scripts/probe_first_date.py,acquisition utility,Bisect an assumed missing-to-available transition in the GFS archive.
+scripts/probe_gfs_avail.py,acquisition utility,Probe representative GFS dates and naming conventions over several years.
+scripts/probe_gfs_avail.sh,acquisition utility,Shell utility; see source and REPRODUCE.md for external commands.
+scripts/probe_head_2021.sh,acquisition utility,Shell utility; see source and REPRODUCE.md for external commands.
+scripts/probe_monthly_days.py,acquisition utility,List monthly GFS dates with a cycle-00 analysis file using paginated S3 keys.
+scripts/probe_s3_list.py,acquisition utility,Inspect S3 prefixes and sample keys for GFS archive discovery.
+scripts/stat_download.sh,acquisition utility,Shell utility; see source and REPRODUCE.md for external commands.

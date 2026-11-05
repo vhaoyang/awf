@@ -1,0 +1,14 @@
+lightgbm
+matplotlib
+numpy
+pandas
+pyarrow          # parquet engine for pandas
+pyproj
+cfgrib           # GRIB decoding for GFS/HGT inputs
+pyshp            # imported as `shapefile`
+rasterio
+scikit-learn
+scipy
+shap
+xarray
+torch            # BQN neural network implementation
